@@ -51,6 +51,8 @@ memberActivityController.post("/:activityId", authUser(), (req, res) => {
             discord_name: x,
             id: v4(),
             ingame_name: x,
+            team: "",
+            weapon: "",
           };
 
           members.push(data);

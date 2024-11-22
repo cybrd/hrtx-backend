@@ -9,7 +9,7 @@ export const getActivities = (db: IDatabase<object>) => {
   const query = `
     SELECT a.*, (SELECT COUNT(*) FROM member_activity WHERE activity_id = a.id) as member_count
     FROM activity a
-    ORDER BY activity_date DESC, name ASC
+    ORDER BY activity_date DESC, points DESC
   `;
 
   return db.manyOrNone<Activity>(query, []);

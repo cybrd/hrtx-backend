@@ -8,3 +8,7 @@ CREATE TABLE IF NOT EXISTS  "members" (
   UNIQUE("discord_name"),
   UNIQUE("ingame_name")
 );
+
+ALTER TABLE "members"
+ADD COLUMN "weapon" VARCHAR(128) NOT NULL
+ADD COLUMN "team" VARCHAR(128) NOT NULL
